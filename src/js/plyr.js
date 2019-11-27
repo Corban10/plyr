@@ -154,8 +154,6 @@ class Plyr {
         let iframe = null;
         let url = null;
 
-        console.log('hit');
-
         // Different setup based on type
         switch (type) {
             case 'div':
@@ -215,10 +213,12 @@ class Plyr {
                 // Fake user gesture
                 const e = new Event('touchstart');
                 this.media.dispatchEvent(e);
-
                 break;
 
             case 'video':
+                // Fake user gesture
+                const e = new Event('touchstart');
+                this.media.dispatchEvent(e);
             case 'audio':
                 this.type = type;
                 this.provider = providers.html5;
@@ -239,7 +239,6 @@ class Plyr {
                 if (this.media.hasAttribute('loop')) {
                     this.config.loop.active = true;
                 }
-
                 break;
 
             default:

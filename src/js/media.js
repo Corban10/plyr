@@ -53,6 +53,10 @@ const media = {
         } else if (this.isVimeo) {
             vimeo.setup.call(this);
         }
+
+        // Fake user gesture
+        const e = new Event('touchstart');
+        this.media.dispatchEvent(e);
     },
 };
 
