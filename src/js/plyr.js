@@ -154,6 +154,8 @@ class Plyr {
         let iframe = null;
         let url = null;
 
+        console.log('hit');
+
         // Different setup based on type
         switch (type) {
             case 'div':
@@ -213,7 +215,6 @@ class Plyr {
                 // Fake user gesture
                 const e = new Event('touchstart');
                 this.media.dispatchEvent(e);
-                console.log('hit');
 
                 break;
 
