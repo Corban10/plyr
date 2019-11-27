@@ -19,9 +19,6 @@
         "css.validate": false,
         "scss.validate": false,
         "javascript.validate.enable": false,
-        // Prettier
-        "prettier.eslintIntegration": true,
-        "prettier.stylelintIntegration": true,
         // Formatting
         "editor.tabSize": 4,
         "editor.insertSpaces": true,

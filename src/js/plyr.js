@@ -210,6 +210,11 @@ class Plyr {
                 // Audio will come later for external providers
                 this.type = types.video;
 
+                // Fake user gesture
+                const e = new Event('touchstart');
+                this.media.dispatchEvent(e);
+                console.log('hit');
+
                 break;
 
             case 'video':
